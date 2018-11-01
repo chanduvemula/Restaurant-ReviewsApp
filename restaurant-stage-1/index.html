@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="/Users/Krishna/udacity projects/mws-restaurant-stage-1/css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurant Reviews</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <section id="map-container">
+      <div id="map" aria-label="Map of restaurants" role="application"></div>
+    </section>
+    <section>
+      <div class="filter-options" tabindex="0" aria-label="Filter results">
+        <h2>Filter Results</h2>
+        <select id="neighborhoods-select" aria-label="Select Neighborhood" name="neighborhoods" onchange="updateRestaurants()">
+          <option value="all">All Neighborhoods</option>
+        </select>
+        <select id="cuisines-select" aria-label="Select Cuisine" name="cuisines" onchange="updateRestaurants()">
+          <option value="all">All Cuisines</option>
+        </select>
+      </div>
+      <ul id="restaurants-list" tabindex="0" aria-label="List of restaurants">
+      <li><img class="restaurant-img" src="/Users/Krishna/udacity projects/mws-restaurant-stage-1/img/1.jpg" alt="Mission Chinese Food Restaurant">
+      <h1 tabindex="0">Mission Chinese Food</h1>
+      <p>Manhattan</p>
+      <p>171 E Broadway, New York, NY 10002</p>
+      <a href="./restaurant.html?id=1" aria-label="More details about Mission Chinese Food">View Details</a>
+    </li>
+    <li><img class="restaurant-img" src="/Users/Krishna/udacity projects/mws-restaurant-stage-1/img/2.jpg" alt="Emily">
+    <p>Brooklyn</p>
+    <p>919 Fulton St, Brooklyn, NY 11238</p>
+    <a href="./restaurant.html?id=2" aria-label="More details about Emily">View Details</a>
+  </li>
+  <li><img class="restaurant-img" src="/Users/Krishna/udacity projects/mws-restaurant-stage-1/img/3.jpg" alt="Kang Ho Dong Baekjeong">
+  <h1 tabindex="0">Kang Ho Dong Baekjeong</h1>
+  <p>Manhattan</p>
+  <p>1 E 32nd St, New York, NY 10016</p>
+  <a href="./restaurant.html?id=3" aria-label="More details about Kang Ho Dong Baekjeong">View Details</a>
+</li>
+</li>
+<li><img class="restaurant-img" src="/Users/Krishna/udacity projects/mws-restaurant-stage-1/img/4.jpg" alt="Katz's Delicatessen">
+<h1 tabindex="0">Katz's Delicatessen</h1>
+<p>Manhattan</p>
+<p>205 E Houston St, New York, NY 10002</p>
+<a href="./restaurant.html?id=3" aria-label="More details about Katz's Delicatessen">View Details</a>
+</li>
+</li>
+<li><img class="restaurant-img" src="/Users/Krishna/udacity projects/mws-restaurant-stage-1/img/5.jpg" alt="Roberta's Pizza">
+<h1 tabindex="0">
+<p>Brooklyn</p>
+<p>261 Moore St, Brooklyn, NY 11206</p>
+<a href="./restaurant.html?id=3" aria-label="More details about Roberta's Pizza">View Details</a>
+</li>
+  </ul>
+    </section>
+  </main>
+
+  <script type="application/javascript" charset="utf-8" src="/Users/Krishna/udacity projects/mws-restaurant-stage-1/js/dbhelper.js"></script>
+  <script type="application/javascript" charset="utf-8" src="/Users/Krishna/udacity projects/mws-restaurant-stage-1/js/sw_register.js"></script>
+  <script type="application/javascript" charset="utf-8" src="/Users/Krishna/udacity projects/mws-restaurant-stage-1/js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYb1WQLh2JaKpVrdZegH69tVAI2LH9gNs&libraries=places&callback=initMap"></script>
+
+
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+
+</body>
+
+</html>
